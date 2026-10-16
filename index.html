@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Verification DApp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Certificate Verification DApp</h1>
+      <p>Issue, verify and revoke educational certificates on Ethereum.</p>
+      <button id="connectBtn">Connect MetaMask</button>
+      <p id="walletStatus">Wallet not connected</p>
+      <p id="networkStatus"></p>
+    </header>
+
+    <section class="card">
+      <h2>Issue Certificate</h2>
+      <input id="studentName" placeholder="Student name">
+      <input id="course" placeholder="Course">
+      <input id="certificateHash" placeholder="Unique certificate hash">
+      <button id="issueBtn">Issue Certificate</button>
+      <p id="issueStatus"></p>
+    </section>
+
+    <section class="card">
+      <h2>Verify Certificate</h2>
+      <input id="verifyHash" placeholder="Enter certificate hash">
+      <button id="verifyBtn">Verify</button>
+      <div id="verifyResult" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>Certificate Details</h2>
+      <input id="certificateId" type="number" min="1" placeholder="Certificate ID">
+      <button id="getBtn">Get Certificate</button>
+      <div id="certificateResult" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>Revoke Certificate</h2>
+      <input id="revokeId" type="number" min="1" placeholder="Certificate ID">
+      <button id="revokeBtn">Revoke</button>
+      <p id="revokeStatus"></p>
+    </section>
+
+    <section class="card">
+      <h2>Blockchain Statistics</h2>
+      <button id="totalBtn">Get Total Certificates</button>
+      <p id="totalResult"></p>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
